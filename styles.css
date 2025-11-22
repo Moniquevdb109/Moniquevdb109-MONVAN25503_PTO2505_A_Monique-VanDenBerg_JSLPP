@@ -116,7 +116,7 @@ h4 {
   cursor: pointer;
   margin: 20px 20px;
   color: var(--primary-btn-color);
-  padding: 12px 50px;
+  padding: 10px 50px;
   border-radius: 6px;
   display: flex;  
   align-items: center; 
@@ -400,6 +400,30 @@ form select {
   cursor: pointer;
   margin-right: 20px;
 }
+
+.save-btn, .delete-btn {
+  color: white;
+  border-radius: 20px;
+  border: 0;
+  font-size: 13px;
+  padding: 10px 64px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 24px;
+  margin-bottom: 0px;
+}
+
+.save-btn {
+  background-color: var(--primary-btn-color);
+  margin-right: 24px;
+  margin-left: 24px;
+}
+
+.delete-btn {
+  background-color: #EA5555;
+  margin-left: 40px;
+}
+
 
 /* New Task Modal Window */
 
