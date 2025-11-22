@@ -85,13 +85,94 @@ h4 {
   overflow: hidden; /* Prevents overflowed text/icons from showing */
 }
 
+.sidebar-view {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+}
+
+.preferences {
+  position: fixed;
+  bottom: 30px; 
+}
+
+#sidebar-btn {
+  background: #F4F7FD;
+  border: none;
+  cursor: pointer;
+  margin-left: 50px;
+  color: var(--primary-btn-color);
+  padding: 15px 90px;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  font-weight: 700;
+  margin-left: 0px;
+}
+
+.theme-toggle {
+  background: #F4F7FD;
+  border: none;
+  cursor: pointer;
+  margin: 20px 20px;
+  color: var(--primary-btn-color);
+  padding: 12px 50px;
+  border-radius: 6px;
+  display: flex;  
+  align-items: center; 
+  gap: 6px; 
+}
+
+.switch {
+  position:relative;
+  width:48px;
+  height:28px;
+  display:inline-block;
+}
+
+.switch input{
+  position:absolute;
+  opacity:0;
+  width:1px; height:1px;
+}
+
+.slider {
+  position:absolute;
+  cursor:pointer;
+  top:0; left:0; right:0; bottom:0;
+  background-color: var(--primary-btn-color);
+  transition:.4s;
+  border-radius:34px;
+}
+
+.slider:before {
+  position:absolute;
+  content:"";
+  height:20px;
+  width:20px;
+  left:4px;
+  bottom:4px;
+  background-color:#fff;
+  transition:.4s;
+  border-radius:50%;
+}
+
+.theme-icon {
+  font-size: 24px;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
 /* ===============
    Main Layout
 ================ */
+
 #layout {
   flex: 1; /* Fills remaining space beside sidebar */
   overflow-x: hidden; /* Prevent horizontal scroll */
   width: 100%;
+  
 }
 
 /* ===============
