@@ -40,12 +40,33 @@ export function openTaskModal(task) {
   modal.showModal();
 }
 
+// Handler for deleting a task from the modal
+
 export function setupDeleteTaskHandler() {
   const deleteBtn = document.getElementById("delete-task-btn");
   deleteBtn.addEventListener("click", () => {
     const modal = document.getElementById("task-modal");
     const taskId = parseInt(modal.dataset.taskId, 10);
-    deleteTask(taskId);
-    modal.close();
+
+    const confirmModal = document.getElementById("confirm-delete-modal");
+    confirmModal.dataset.taskId = taskId;
+    confirmModal.showModal();
   });
 }
+
+export function setupConfirmDeleteHandler() {
+  const confirmModal = document.getElementById("confirm-delete-modal");
+  const confirmBtn = document.getElementById("confirm-delete-btn");
+  const cancelBtn = document.getElementById("cancel-delete-btn");
+
+  confirmBtn.addEventListener("click", () => {
+    const taskId = parseInt(confirmModal.dataset.taskId, 10);
+    deleteTask(taskId);
+    confirmModal.close();
+
+    const taskModal = document.getElementById("task-modal");
+    taskModal.close();
+  });
+
+  cancelBtn.addEventListener("click", () => confirmModal.close());
+} 

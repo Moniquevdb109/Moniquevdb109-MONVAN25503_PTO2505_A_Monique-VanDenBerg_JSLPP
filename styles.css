@@ -424,6 +424,46 @@ form select {
   margin-left: 40px;
 }
 
+/* Delete confirmation modal */
+
+#confirm-delete-modal {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  border-radius: 8px;
+  width: 90%;
+  max-width: 600px;
+  padding: 24px;
+  background-color: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#confirm-delete-modal::backdrop {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+#cancel-delete-btn {
+  color: white;
+  background-color: var(--primary-btn-color);
+  margin-left: 130px;
+  margin-top: 24px;
+  margin-bottom: 0px;
+  border-radius: 20px;
+  border: 0;
+  font-size: 13px;
+  padding: 10px 57px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+#confirmation-par {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
 
 /* New Task Modal Window */
 

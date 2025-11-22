@@ -4,6 +4,7 @@ import {
   setupModalCloseHandler,
   setupNewTaskModalHandler,
   setupDeleteTaskHandler,
+  setupConfirmDeleteHandler
 } from "./ui/modalHandlers.js";
 
 function initTaskBoard() {
@@ -13,6 +14,7 @@ function initTaskBoard() {
   setupModalCloseHandler();
   setupNewTaskModalHandler();
   setupDeleteTaskHandler();
+  setupConfirmDeleteHandler();
 }
 
 document.addEventListener("DOMContentLoaded", initTaskBoard);
