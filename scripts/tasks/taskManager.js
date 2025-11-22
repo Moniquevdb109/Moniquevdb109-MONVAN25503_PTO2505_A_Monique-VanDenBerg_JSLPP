@@ -29,3 +29,16 @@ export function addNewTask() {
   resetForm();
   overlay.close();
 }
+
+// Delete tasks by ID
+export function deleteTask(taskId) {
+  const tasks = loadTasksFromStorage();
+  const updatedTasks = tasks.filter((task) => task.id !== taskId);
+  saveTasksToStorage(updatedTasks);
+
+  clearExistingTasks();
+  renderTasks(updatedTasks);
+}
+
+
+

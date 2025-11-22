@@ -3,6 +3,7 @@ import { clearExistingTasks, renderTasks } from "./ui/render.js";
 import {
   setupModalCloseHandler,
   setupNewTaskModalHandler,
+  setupDeleteTaskHandler,
 } from "./ui/modalHandlers.js";
 
 function initTaskBoard() {
@@ -11,6 +12,7 @@ function initTaskBoard() {
   renderTasks(tasks);
   setupModalCloseHandler();
   setupNewTaskModalHandler();
+  setupDeleteTaskHandler();
 }
 
 document.addEventListener("DOMContentLoaded", initTaskBoard);
