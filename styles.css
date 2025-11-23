@@ -163,6 +163,26 @@ h4 {
   margin-left: 10px;
 }
 
+/* ===============
+   Hidden Sidebar
+================ */
+
+.hidden {
+  display: none;
+}
+
+.show-sidebar-btn {
+  position: fixed;
+  bottom: 40px; /* positions it px from bottom */
+  left: 0px;
+  background-color: #A8A4FF;
+  border: none;
+  border-radius: 0 100px 100px 0;
+  padding: 10px 14px;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10; /* displays on top of other elements - ensuring visability */
+}
 
 /* ===============
    Main Layout
