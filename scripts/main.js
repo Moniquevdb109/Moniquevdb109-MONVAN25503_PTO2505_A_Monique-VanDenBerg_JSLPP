@@ -7,6 +7,7 @@ import {
   setupConfirmDeleteHandler,
   setupEditTaskHandler
 } from "./ui/modalHandlers.js";
+import { setupSidebarDesktopUI } from "./ui/sidebarUI.js";
 
 function initTaskBoard() {
   const tasks = loadTasksFromStorage();
@@ -17,6 +18,7 @@ function initTaskBoard() {
   setupDeleteTaskHandler();
   setupConfirmDeleteHandler();
   setupEditTaskHandler();
+  setupSidebarDesktopUI();
 }
 
 document.addEventListener("DOMContentLoaded", initTaskBoard);
