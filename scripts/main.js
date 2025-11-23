@@ -4,7 +4,7 @@ import {
   setupModalCloseHandler,
   setupNewTaskModalHandler,
   setupDeleteTaskHandler,
-  setupConfirmDeleteHandler
+  setupConfirmDeleteHandler,
   setupEditTaskHandler
 } from "./ui/modalHandlers.js";
 
