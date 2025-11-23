@@ -30,6 +30,19 @@ export function addNewTask() {
   overlay.close();
 }
 
+// Edit existing tasks
+export function editTask(taskId, updatedData) {
+  const tasks = loadTasksFromStorage();
+  const updatedTasks = tasks.map((task) =>
+    task.id === taskId ? { ...task, ...updatedData } : task
+  );
+  saveTasksToStorage(updatedTasks);
+
+  clearExistingTasks();
+  renderTasks(updatedTasks);
+}
+
+
 // Delete tasks by ID
 export function deleteTask(taskId) {
   const tasks = loadTasksFromStorage();
