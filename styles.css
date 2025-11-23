@@ -617,6 +617,14 @@ textarea {
   .column-div {
     width: 100%;
   }
+
+  #sidebar-btn {
+    display: none;
+  }
+
+  .show-sidebar-btn {
+    display: none !important;
+  }
 }
 
 /******** Mobile ********/
@@ -645,5 +653,13 @@ textarea {
     padding-right: 14px;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  #sidebar-btn {
+    display: none;
+  }
+
+  .show-sidebar-btn {
+    display: none !important;
   }
 }
