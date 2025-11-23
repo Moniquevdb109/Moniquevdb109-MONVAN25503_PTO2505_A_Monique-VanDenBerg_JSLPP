@@ -163,6 +163,10 @@ h4 {
   margin-left: 10px;
 }
 
+#close-menu-btn {
+  display: none;
+}
+
 /* ===============
    Hidden Sidebar
 ================ */
@@ -625,6 +629,11 @@ textarea {
   .show-sidebar-btn {
     display: none !important;
   }
+
+  #close-menu-btn {
+    display: block;
+  }
+
 }
 
 /******** Mobile ********/
@@ -661,5 +670,35 @@ textarea {
 
   .show-sidebar-btn {
     display: none !important;
+  }
+
+  #close-menu-btn {
+    display: block;
+    padding-right: 10px;
+    font-size: 32px;
+  }
+
+  .side-bar.show-sidebar {
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 280px;
+    height: auto;
+    border-radius: 8px;
+    z-index: 10;
+  }
+
+  .menu-header-div {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  #headline-sidepanel {
+    padding: 0 12px 0 20px;
+  }
+
+  .preferences {
+    position: static;
+    margin-top: 16px;
   }
 }

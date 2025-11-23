@@ -28,3 +28,28 @@ export function setupSidebarDesktopUI() {
     }   
     }); 
 }
+
+// Sidebar mobile menu UI
+
+export function setupSidebarMobileUI() {
+    const sidebar = document.getElementById("side-bar-div");
+    const mobileBtn = document.getElementById("mobile-menu-btn");
+    const closeBtn = document.getElementById("close-menu-btn");
+
+  function openMobileMenu() {
+    sidebar.classList.add("show-sidebar");
+  }
+
+  function closeMobileMenu() {
+    sidebar.classList.remove("show-sidebar");
+  }
+
+  mobileBtn.addEventListener("click", openMobileMenu);
+  closeBtn.addEventListener("click", closeMobileMenu);
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 1023) {
+      closeMobileMenu();
+    }
+  });
+}
