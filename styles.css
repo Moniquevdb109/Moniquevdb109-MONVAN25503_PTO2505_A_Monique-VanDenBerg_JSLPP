@@ -685,7 +685,7 @@ textarea {
     width: 280px;
     height: auto;
     border-radius: 8px;
-    z-index: 10;
+    z-index: 1000;
   }
 
   .menu-header-div {
@@ -701,4 +701,16 @@ textarea {
     position: static;
     margin-top: 16px;
   }
+
+  .sidebar-backdrop{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 900;
+}
+
+.hidden{ 
+  display:none !important; 
+}
+
 }

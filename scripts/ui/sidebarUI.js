@@ -35,13 +35,16 @@ export function setupSidebarMobileUI() {
     const sidebar = document.getElementById("side-bar-div");
     const mobileBtn = document.getElementById("mobile-menu-btn");
     const closeBtn = document.getElementById("close-menu-btn");
+    const backdrop = document.getElementById("sidebar-backdrop");
 
   function openMobileMenu() {
     sidebar.classList.add("show-sidebar");
+    backdrop.classList.remove("hidden");
   }
 
   function closeMobileMenu() {
     sidebar.classList.remove("show-sidebar");
+    backdrop.classList.add("hidden");
   }
 
   mobileBtn.addEventListener("click", openMobileMenu);
