@@ -1,4 +1,4 @@
-import { addNewTask, deleteTask } from "../tasks/taskManager.js";
+import { addNewTask, deleteTask, editTask } from "../tasks/taskManager.js";
 
 export function setupModalCloseHandler() {
   const modal = document.getElementById("task-modal");
@@ -54,6 +54,7 @@ export function setupDeleteTaskHandler() {
   });
 }
 
+// Handler for confirming task deletion
 export function setupConfirmDeleteHandler() {
   const confirmModal = document.getElementById("confirm-delete-modal");
   const confirmBtn = document.getElementById("confirm-delete-btn");
@@ -70,3 +71,24 @@ export function setupConfirmDeleteHandler() {
 
   cancelBtn.addEventListener("click", () => confirmModal.close());
 } 
+
+// Handler for saving edited tasks
+export function setupEditTaskHandler() {
+  const form = document.getElementById("task-form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const modal = document.getElementById("task-modal");
+    const taskId = Number(modal.dataset.taskId);
+    
+    const updatedData = {
+      title: document.getElementById("task-title").value.trim(),
+      description: document.getElementById("task-desc").value.trim(),
+      status: document.getElementById("task-status").value,
+    };
+
+    editTask(taskId, updatedData);
+    modal.close();
+  });
+} 
+
