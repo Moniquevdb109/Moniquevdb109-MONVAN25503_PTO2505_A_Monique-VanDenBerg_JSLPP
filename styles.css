@@ -107,7 +107,7 @@ h4 {
 }
 
 #sidebar-btn {
-  background: #F4F7FD;
+  background: var(--secondary-color);
   border: none;
   cursor: pointer;
   margin-left: 50px;
@@ -164,6 +164,10 @@ h4 {
   background-color:#fff;
   transition:.4s;
   border-radius:50%;
+}
+
+.switch input:checked + .slider:before {
+  transform: translateX(20px);
 }
 
 .theme-icon {
@@ -360,6 +364,14 @@ dialog {
   color: var(--primary-font-color);
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   /*font-family: "Plus Jakarta Sans", sans-serif;*/
+}
+
+#task-modal input,
+#task-modal textarea,
+#task-modal select {
+  background-color: #fff;
+  color: #000;
+  border: 1px solid #828fa3;
 }
 
 /* Header */
@@ -721,6 +733,22 @@ textarea {
     padding-right: 14px;
     padding-top: 0;
     padding-bottom: 0;
+  }
+
+  .switch input:checked + .slider:before {
+    transform: translateX(12px);
+  }
+
+  #confirm-delete-btn {
+    margin-left: 0px;
+    padding: 10px 40px;
+    margin-left: 8px;
+  }
+
+  #cancel-delete-btn {
+    margin-left: 0px;
+    padding: 10px 30px;
+    margin-left: 60px;
   }
 
   #sidebar-btn {

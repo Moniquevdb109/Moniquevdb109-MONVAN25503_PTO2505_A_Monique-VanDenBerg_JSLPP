@@ -8,6 +8,7 @@ import {
   setupEditTaskHandler
 } from "./ui/modalHandlers.js";
 import { setupSidebarDesktopUI, setupSidebarMobileUI } from "./ui/sidebarUI.js";
+import { setupThemeToggleUI } from "./ui/themeUI.js";
 
 function initTaskBoard() {
   const tasks = loadTasksFromStorage();
@@ -20,6 +21,7 @@ function initTaskBoard() {
   setupEditTaskHandler();
   setupSidebarDesktopUI();
   setupSidebarMobileUI();
+  setupThemeToggleUI();
 }
 
 document.addEventListener("DOMContentLoaded", initTaskBoard);
