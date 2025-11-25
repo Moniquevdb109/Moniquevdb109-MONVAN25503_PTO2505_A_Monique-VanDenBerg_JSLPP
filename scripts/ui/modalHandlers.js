@@ -37,6 +37,7 @@ export function openTaskModal(task) {
   document.getElementById("task-title").value = task.title;
   document.getElementById("task-desc").value = task.description;
   document.getElementById("task-status").value = task.status;
+  document.getElementById("task-priority").value = task.priority || "medium";
   modal.showModal();
 }
 
@@ -85,6 +86,7 @@ export function setupEditTaskHandler() {
       title: document.getElementById("task-title").value.trim(),
       description: document.getElementById("task-desc").value.trim(),
       status: document.getElementById("task-status").value,
+      priority: document.getElementById("task-priority").value,
     };
 
     editTask(taskId, updatedData);

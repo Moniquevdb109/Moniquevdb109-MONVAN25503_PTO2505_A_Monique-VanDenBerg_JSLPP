@@ -21,6 +21,7 @@ export function addNewTask() {
     title,
     description,
     status,
+    priority,
   };
 
   const updatedTasks = [...tasks, newTask];
