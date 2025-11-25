@@ -5,11 +5,13 @@ import {
 import { clearExistingTasks, renderTasks } from "../ui/render.js";
 import { resetForm } from "./formUtils.js";
 
+// Add new tasks
 export function addNewTask() {
   const title = document.getElementById("title-input").value.trim();
   const description = document.getElementById("desc-input").value.trim();
   const status = document.getElementById("select-status").value;
   const overlay = document.querySelector(".modal-overlay");
+  const proiority = document.getElementById("select-priority").value;
 
   if (!title) return;
 
