@@ -11,7 +11,7 @@ export function addNewTask() {
   const description = document.getElementById("desc-input").value.trim();
   const status = document.getElementById("select-status").value;
   const overlay = document.querySelector(".modal-overlay");
-  const proiority = document.getElementById("select-priority").value;
+  const priority = document.getElementById("select-priority").value;
 
   if (!title) return;
 

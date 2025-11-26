@@ -566,6 +566,31 @@ textarea {
 }
 
 /* ========================
+   Priority Badge Styles
+======================== */
+
+.priority-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-left: auto; 
+  margin-right: 16px; 
+  flex-shrink: 0;
+}
+
+.priority-high { 
+  background: #ef2c2c; 
+}
+
+.priority-medium { 
+  background: #ed8d0e; 
+}
+
+.priority-low { 
+  background: #5fea40; 
+} 
+
+/* ========================
    Responsive Styles
 ======================== */
 

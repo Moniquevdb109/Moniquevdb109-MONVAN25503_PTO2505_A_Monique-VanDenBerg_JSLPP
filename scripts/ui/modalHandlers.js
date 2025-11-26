@@ -2,7 +2,7 @@ import { addNewTask, deleteTask, editTask } from "../tasks/taskManager.js";
 
 export function setupModalCloseHandler() {
   const modal = document.getElementById("task-modal");
-  const closeBtn = document.getElementById("close-modal-btn");;length
+  const closeBtn = document.getElementById("close-modal-btn");length
   closeBtn.addEventListener("click", () => modal.close());
 }
 
