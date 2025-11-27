@@ -135,7 +135,7 @@ export function setupEditTaskHandler() {
     e.preventDefault();
 
     const modal = document.getElementById("task-modal");
-    const taskId = Number(modal.dataset.taskId);
+    const taskId = Number(modal.dataset.taskId); //to number
     
     const updatedData = {
       title: document.getElementById("task-title").value.trim(),

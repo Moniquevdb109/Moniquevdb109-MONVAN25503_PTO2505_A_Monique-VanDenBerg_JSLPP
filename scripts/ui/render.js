@@ -75,8 +75,8 @@ export function renderTasks(tasks) {
       return;
 
     const columnTasks = tasks
-      .filter((task) => task.status === status)
-      .sort(comparePriority);
+      .filter((task) => task.status === status) // filters through each task for each column
+      .sort(comparePriority); // sort = built in array method
 
     columnTasks.forEach((task) => {
       const taskElement = createTaskElement(task);
