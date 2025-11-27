@@ -1,11 +1,27 @@
 import { addNewTask, deleteTask, editTask } from "../tasks/taskManager.js";
 
+/**
+ * Sets up the close (X) button for the task details modal.
+ * When the user clicks the close button, the modal closes.
+ *
+ * @returns {void}
+ */
 export function setupModalCloseHandler() {
   const modal = document.getElementById("task-modal");
   const closeBtn = document.getElementById("close-modal-btn");length
   closeBtn.addEventListener("click", () => modal.close());
 }
 
+/**
+ * Sets up the "Add New Task" button to open the new-task modal,
+ * and sets up the cancel + submit behavior for that modal form.
+ *
+ * - Clicking "Add New Task" opens the modal overlay
+ * - Clicking "Cancel" closes it
+ * - Submitting the form calls `addNewTask()` if the form is valid
+ *
+ * @returns {void}
+ */
 export function setupNewTaskModalHandler() {
   const overlay = document.querySelector(".modal-overlay");
   const newTaskBtn = document.getElementById("add-new-task-btn");
@@ -29,6 +45,17 @@ export function setupNewTaskModalHandler() {
   });
 }
 
+/**
+ * Opens the task modal so the user can view/edit a specific task.
+ *
+ * It:
+ * - stores the task id inside the modal using `modal.dataset.taskId`
+ * - fills the form inputs with that task's current values
+ * - opens the modal
+ *
+ * @param {Object} task - The task object to display in the modal.
+ * @returns {void}
+ */
 export function openTaskModal(task) {
   const modal = document.getElementById("task-modal");
 
@@ -41,7 +68,16 @@ export function openTaskModal(task) {
   modal.showModal();
 }
 
-// Handler for deleting a task from the modal
+/**
+ * Sets up the "Delete" button inside the task modal.
+ *
+ * When clicked:
+ * - reads the currently-open task id from `task-modal.dataset.taskId`
+ * - saves that id onto the confirm-delete modal
+ * - opens the confirm-delete modal
+ *
+ * @returns {void}
+ */
 
 export function setupDeleteTaskHandler() {
   const deleteBtn = document.getElementById("delete-task-btn");
@@ -55,7 +91,14 @@ export function setupDeleteTaskHandler() {
   });
 }
 
-// Handler for confirming task deletion
+/**
+ * Sets up the confirm-delete modal buttons ("Delete" and "Cancel").
+ *
+ * - Clicking confirm deletes the task from storage and closes both modals
+ * - Clicking cancel only closes the confirm modal
+ *
+ * @returns {void}
+ */
 export function setupConfirmDeleteHandler() {
   const confirmModal = document.getElementById("confirm-delete-modal");
   const confirmBtn = document.getElementById("confirm-delete-btn");
@@ -73,7 +116,19 @@ export function setupConfirmDeleteHandler() {
   cancelBtn.addEventListener("click", () => confirmModal.close());
 } 
 
-// Handler for saving edited tasks
+
+/**
+ * Sets up the save/edit behavior for the task modal form.
+ *
+ * When the form is submitted:
+ * - prevents the page refresh
+ * - reads the task id from `task-modal.dataset.taskId`
+ * - collects updated form values into `updatedData`
+ * - calls `editTask(taskId, updatedData)` to save + re-render
+ * - closes the modal
+ *
+ * @returns {void}
+ */
 export function setupEditTaskHandler() {
   const form = document.getElementById("task-form");
   form.addEventListener("submit", (e) => {
